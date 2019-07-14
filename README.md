@@ -12,7 +12,31 @@ it seems that the business logic will be slightly harder to implement (so will h
 
 ## NOTES
 
-- three main types of events (startTag, endTag, text)
+easy access to three main types of events
+
+### startTag
+
+```js
+rewriter.on('startTag', tag => {
+    ...
+})
+```
+
+### endTag
+
+```js
+rewriter.on('endTag', tag => {
+    ...
+})
+```
+
+### text
+
+```js
+rewriter.on('text', (_, text) => {
+    ...
+})
+```
 
 ## QUESTIONS
 
