@@ -1,4 +1,6 @@
 const fs = require('fs')
+
+// dummy data to write, simulate lawyer URLs
 const buildUrls = () => {
   let urls = []
   for (let i = 0; i < 10000; i++) {
@@ -8,6 +10,8 @@ const buildUrls = () => {
   return urls
 }
 
+// not much more complicated than using ejs and probably way more
+// memory-efficient
 const writeStream = fs.createWriteStream('sitemap.xml')
 writeStream.write(`
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
